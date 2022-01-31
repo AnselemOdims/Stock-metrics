@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 import { motion } from 'framer-motion';
 import PropTypes from 'prop-types';
+
 import Card from './Card';
 
 const List = styled.ul`
@@ -34,8 +35,8 @@ const CardList = ({ stocks }) => (
   >
     <List>
       {stocks.map((item) => (
-        <li key={item}>
-          <Card id={item} />
+        <li key={item.ticker}>
+          <Card id={item.ticker} />
         </li>
       ))}
     </List>
@@ -43,6 +44,12 @@ const CardList = ({ stocks }) => (
 );
 
 CardList.propTypes = {
-  stocks: PropTypes.arrayOf(PropTypes.number).isRequired,
+  stocks: PropTypes.arrayOf(PropTypes.shape({
+    ticker: PropTypes.string.isRequired,
+    changes: PropTypes.number.isRequired,
+    price: PropTypes.string.isRequired,
+    changesPercentage: PropTypes.string.isRequired,
+    companyName: PropTypes.string.isRequired,
+  })).isRequired,
 };
 export default CardList;

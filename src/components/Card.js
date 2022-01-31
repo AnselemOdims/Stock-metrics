@@ -79,6 +79,6 @@ const Card = ({ id }) => (
 );
 
 Card.propTypes = {
-  id: PropTypes.number.isRequired,
+  id: PropTypes.string.isRequired,
 };
 export default Card;
