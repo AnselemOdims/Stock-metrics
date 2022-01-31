@@ -3,7 +3,7 @@ import { BsArrowUp, BsArrowDown, BsArrowRightCircle } from 'react-icons/bs';
 import { NavLink } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import PropTypes from 'prop-types';
-import Img from '../images/stock_card.svg';
+import Img from '../images/stock_card.png';
 
 const Container = styled.div`
   border: solid 1px #f5eedc;
@@ -12,8 +12,9 @@ const Container = styled.div`
   border-radius: 5px;
   background-image: url(${Img});
   background-repeat: no-repeat;
-  background-position: 100% 245%;
-  background-size: contain;
+  background-position: bottom right;
+  background-size: 70% 40%;
+  height: 200px;
 
   > a {
     text-decoration: none;
@@ -54,7 +55,7 @@ const Card = ({
   id, ticker, changes, price, changesPercentage, companyName,
 }) => (
   <motion.div
-    whileHover={{ scale: 1.01, borderRadius: 10 }}
+    // whileHover={{ scale: 1.01, borderRadius: 10 }}
     transition={{ duration: 1 }}
   >
     <Container>

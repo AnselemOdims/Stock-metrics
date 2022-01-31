@@ -12,7 +12,7 @@ const Home = () => {
   const stocks = useSelector(({ stocksReducer }) => stocksReducer.stocks);
 
   useEffect(() => {
-    dispatch(fetchStocks());
+    if (stocks.length === 0) dispatch(fetchStocks());
   }, []);
 
   return (
