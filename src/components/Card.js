@@ -55,29 +55,29 @@ const Container = styled.div`
 const Card = ({
   id, ticker, changes, price, changesPercentage, companyName,
 }) => (
-    <Container onClick={()=> console.log('hello')}>
-      <NavLink to={`/details/${id}`}>
-        <div>
-          <h2>{companyName}</h2>
-          <BsArrowRightCircle />
-        </div>
-        <span>{ticker}</span>
-        <div>
-          <span>
-            $
-            {price}
-          </span>
-          <span>
-            <BsArrowUp color="green" />
-            {changes}
-          </span>
-          <span>
-            <BsArrowDown color="red" />
-            {changesPercentage}
-          </span>
-        </div>
-      </NavLink>
-    </Container>
+  <Container onClick={() => console.log('hello')}>
+    <NavLink to={`/details/${id}`}>
+      <div>
+        <h2>{companyName}</h2>
+        <BsArrowRightCircle />
+      </div>
+      <span>{ticker}</span>
+      <div>
+        <span>
+          $
+          {price}
+        </span>
+        <span>
+          <BsArrowUp color="green" />
+          {changes}
+        </span>
+        <span>
+          <BsArrowDown color="red" />
+          {changesPercentage}
+        </span>
+      </div>
+    </NavLink>
+  </Container>
 );
 
 Card.propTypes = {
