@@ -5,7 +5,7 @@ import { useParams } from 'react-router-dom';
 import Header from '../Header';
 import DetailHero from '../DetailHero';
 import { fetchDetails } from '../../redux/stocks/thunks/stock';
-import CardList from '../CardList';
+import DetailsList from '../DetailsList';
 
 const Details = () => {
   const dispatch = useDispatch();
@@ -23,7 +23,7 @@ const Details = () => {
     <>
       <Header home={false} />
       <DetailHero text={detail.companyName} />
-      <CardList stocks={details} />
+      <DetailsList details={details} />
     </>
   );
 };
