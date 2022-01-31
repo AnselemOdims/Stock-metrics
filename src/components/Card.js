@@ -31,7 +31,7 @@ const Container = styled.div`
     }
 
     > span {
-      background: #f7fad3;
+      background: rgba(247, 250, 211, 0.637);
       border-radius: 8px;
       padding: 3px 10px;
       font-size: 10px;

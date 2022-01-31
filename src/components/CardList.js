@@ -43,6 +43,6 @@ const CardList = ({ stocks }) => (
 );
 
 CardList.propTypes = {
-  stocks: PropTypes.arrayOf('number').isRequired,
+  stocks: PropTypes.arrayOf(PropTypes.number).isRequired,
 };
 export default CardList;
