@@ -10,7 +10,7 @@ const List = styled.ul`
   padding: 0;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  width: 100%;
+  max-width: 100vw;
 `;
 const containerVariants = {
   hidden: {

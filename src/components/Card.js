@@ -13,8 +13,8 @@ const Container = styled.div`
   background-image: url(${Img});
   background-repeat: no-repeat;
   background-position: bottom right;
-  background-size: 70% 40%;
-  height: 200px;
+  background-size: 55% 23%;
+  height: 250px;
 
   > a {
     text-decoration: none;
@@ -28,6 +28,7 @@ const Container = styled.div`
 
       > h2 {
         margin: 0;
+        font-size: 1rem;
       }
     }
 
