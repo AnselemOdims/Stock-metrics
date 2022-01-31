@@ -55,11 +55,7 @@ const Container = styled.div`
 const Card = ({
   id, ticker, changes, price, changesPercentage, companyName,
 }) => (
-  <motion.div
-    // whileHover={{ scale: 1.01, borderRadius: 10 }}
-    transition={{ duration: 1 }}
-  >
-    <Container>
+    <Container onClick={()=> console.log('hello')}>
       <NavLink to={`/details/${id}`}>
         <div>
           <h2>{companyName}</h2>
@@ -82,7 +78,6 @@ const Card = ({
         </div>
       </NavLink>
     </Container>
-  </motion.div>
 );
 
 Card.propTypes = {
