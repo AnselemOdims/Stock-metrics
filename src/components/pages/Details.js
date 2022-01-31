@@ -1,11 +1,9 @@
 import Header from '../Header';
 
-const Details = () => {
-  return ( 
-    <>
-      <Header />
-    </>
-   );
-}
- 
+const Details = () => (
+  <>
+    <Header />
+  </>
+);
+
 export default Details;

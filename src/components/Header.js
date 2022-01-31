@@ -1,8 +1,9 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 import { BsFillMicFill } from 'react-icons/bs';
 import { IoIosSettings, IoIosArrowBack } from 'react-icons/io';
 import { NavLink } from 'react-router-dom';
 import { motion } from 'framer-motion';
+import PropTypes from 'prop-types';
 
 const NavBar = styled.header`
   display: flex;
@@ -23,35 +24,42 @@ const NavBar = styled.header`
       margin-right: 15px;
     }
   }
-`
+`;
 
 const containerVariants = {
   hidden: {
-    y: -100
+    y: -100,
   },
   visible: {
-    y:0,
-    transition: {duration:0.5, stiffness:500}
-  }
-}
+    y: 0,
+    transition: { duration: 0.5, stiffness: 500 },
+  },
+};
 
-const Header = ({home}) => {
-  return ( 
-    <motion.div variants={containerVariants} initial='hidden' animate='visible' >
+const Header = ({ home }) => (
+  <motion.div variants={containerVariants} initial="hidden" animate="visible">
     <NavBar>
-      {!home && <NavLink to="/">
-        <IoIosArrowBack size='20px'  color="#133B5C" />
-      </NavLink>}
+      {!home && (
+        <NavLink to="/">
+          <IoIosArrowBack size="20px" color="#133B5C" />
+        </NavLink>
+      )}
       <div>
         <h3>Stock Metrics</h3>
       </div>
       <div>
-        <span><BsFillMicFill size='18px'   color="#133B5C"/></span>
-        <span> <IoIosSettings size='18px'  color="#133B5C"/></span>
+        <span><BsFillMicFill size="18px" color="#133B5C" /></span>
+        <span>
+          {' '}
+          <IoIosSettings size="18px" color="#133B5C" />
+        </span>
       </div>
     </NavBar>
-    </motion.div>
-   );
-}
- 
+  </motion.div>
+);
+
+Header.propTypes = {
+  home: PropTypes.bool.isRequired,
+};
+
 export default Header;
