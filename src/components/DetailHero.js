@@ -15,7 +15,7 @@ const Section = styled.section`
     padding: 10px 20px;
 
     > h2 {
-      font-size: 1.2rem;
+      font-size: 1.3rem;
       margin: -7px 0 20px;
     }
 
@@ -32,28 +32,19 @@ const Section = styled.section`
   }
 `;
 
-const DetailHero = ({ text, details }) => {
- 
-  return (
+const DetailHero = ({ text, details }) => (
   <Section>
     <motion.div>
-      <h2>{text}</h2>
+      <h2>{text.toUpperCase()}</h2>
+      <p>INCOME STATEMENT</p>
       <div>
         <span>{`Total Revenue: $${sumRevenue(details)}billion`}</span>
         <span>{`Total Profit: $${sumProfit(details)}billion`}</span>
         <span>{`Total Expenses: $${sumExpenses(details)}billion`}</span>
-        {/* <span>
-          <BsArrowUp color="green" />
-          +2.03%
-        </span>
-        <span>
-          <BsArrowDown color="red" />
-          -0.50%
-        </span> */}
       </div>
     </motion.div>
   </Section>
-)};
+);
 
 DetailHero.propTypes = {
   text: PropTypes.string.isRequired,

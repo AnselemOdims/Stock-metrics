@@ -17,12 +17,12 @@ const Details = () => {
 
   useEffect(() => {
     dispatch(fetchDetails(param.id));
-  }, []);
+  }, [param]);
 
   return (
     <>
       <Header home={false} />
-      <DetailHero text={`${detail.companyName} INCOME STATEMENT`} details={details}/>
+      <DetailHero text={detail.companyName} details={details} />
       <DetailsList details={details} />
     </>
   );
