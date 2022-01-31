@@ -22,7 +22,7 @@ const Details = () => {
   return (
     <>
       <Header home={false} />
-      <DetailHero text={detail.companyName} />
+      <DetailHero text={`${detail.companyName} INCOME STATEMENT`} details={details}/>
       <DetailsList details={details} />
     </>
   );

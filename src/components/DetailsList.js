@@ -16,7 +16,7 @@ const List = styled.ul`
     display: grid;
     grid-template-columns: 50% 10% 1fr;
     gap: 0 10px;
-    border: solid 1px red;
+    border: solid 1px #f5eedc;
     padding: 15px 5px;
     font-size: 12px;
     background: #e8e8a6;
