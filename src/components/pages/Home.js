@@ -1,8 +1,10 @@
 import Header from '../Header';
+import Hero from '../Hero';
 
 const Home = () => (
   <>
-    <Header />
+    <Header home />
+    <Hero text="Today's Total" />
   </>
 );
 
