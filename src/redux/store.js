@@ -2,11 +2,12 @@ import { createStore, combineReducers, applyMiddleware } from 'redux';
 import logger from 'redux-logger';
 import thunk from 'redux-thunk';
 
-import stocksReducer from './stocks/reducers/stockReducer';
+import { stocksReducer, detailsReducer } from './stocks/reducers/stockReducer';
 
 // combine one or more reducers
 const reducer = combineReducers({
   stocksReducer,
+  detailsReducer,
 });
 
 // create the store

@@ -4,7 +4,11 @@ const initStockState = {
   stocks: [],
 };
 
-const stocksReducer = (state = initStockState, { type, payload }) => {
+const initDetailsState = {
+  details: [],
+};
+
+export const stocksReducer = (state = initStockState, { type, payload }) => {
   switch (type) {
     case Actions.ALLSTOCKS_RETRIEVED:
       return { stocks: [...payload] };
@@ -13,4 +17,11 @@ const stocksReducer = (state = initStockState, { type, payload }) => {
   }
 };
 
-export default stocksReducer;
+export const detailsReducer = (state = initDetailsState, { type, payload }) => {
+  switch (type) {
+    case Actions.SINGLESTOCK_RETRIEVED:
+      return { details: [...payload] };
+    default:
+      return state;
+  }
+};

@@ -10,20 +10,20 @@ import CardList from '../CardList';
 const Details = () => {
   const dispatch = useDispatch();
   const stocks = useSelector(({ stocksReducer }) => stocksReducer.stocks);
+  const details = useSelector(({ detailsReducer }) => detailsReducer.details);
   const param = useParams();
 
   const detail = stocks.find((stock) => stock.ticker == param.id);
-  console.log(detail);
 
-  // useEffect(() => {
-  //   dispatch(fetchDetails(param.id));
-  // }, []);
+  useEffect(() => {
+    dispatch(fetchDetails(param.id));
+  }, []);
 
   return (
     <>
       <Header home={false} />
       <DetailHero text={detail.companyName} />
-      <CardList stocks={stocks} />
+      <CardList stocks={details} />
     </>
   );
 };
