@@ -36,7 +36,14 @@ const CardList = ({ stocks }) => (
     <List>
       {stocks.map((item) => (
         <li key={item.ticker}>
-          <Card id={item.ticker} />
+          <Card
+            id={item.ticker}
+            ticker={item.ticker}
+            changes={item.changes}
+            price={item.price}
+            changesPercentage={item.changesPercentage}
+            companyName={item.companyName}
+          />
         </li>
       ))}
     </List>

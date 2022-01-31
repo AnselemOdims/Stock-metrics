@@ -50,7 +50,9 @@ const Container = styled.div`
     }
   }
 `;
-const Card = ({ id }) => (
+const Card = ({
+  id, ticker, changes, price, changesPercentage, companyName,
+}) => (
   <motion.div
     whileHover={{ scale: 1.01, borderRadius: 10 }}
     transition={{ duration: 1 }}
@@ -58,19 +60,22 @@ const Card = ({ id }) => (
     <Container>
       <NavLink to={`/details/${id}`}>
         <div>
-          <h2>Apple Inc.</h2>
+          <h2>{companyName}</h2>
           <BsArrowRightCircle />
         </div>
-        <span>AAPL</span>
+        <span>{ticker}</span>
         <div>
-          <span>$20,000</span>
+          <span>
+            $
+            {price}
+          </span>
           <span>
             <BsArrowUp color="green" />
-            +2.03%
+            {changes}
           </span>
           <span>
             <BsArrowDown color="red" />
-            -0.50%
+            {changesPercentage}
           </span>
         </div>
       </NavLink>
@@ -80,5 +85,10 @@ const Card = ({ id }) => (
 
 Card.propTypes = {
   id: PropTypes.string.isRequired,
+  ticker: PropTypes.string.isRequired,
+  changes: PropTypes.number.isRequired,
+  price: PropTypes.string.isRequired,
+  changesPercentage: PropTypes.string.isRequired,
+  companyName: PropTypes.string.isRequired,
 };
 export default Card;
