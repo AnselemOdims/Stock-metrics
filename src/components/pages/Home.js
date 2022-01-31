@@ -5,7 +5,7 @@ import Header from '../Header';
 import Hero from '../Hero';
 import SearchBar from '../SearchBar';
 import CardList from '../CardList';
-import fetchStocks from '../../redux/stocks/thunks/stock';
+import { fetchStocks } from '../../redux/stocks/thunks/stock';
 
 const Home = () => {
   const dispatch = useDispatch();
@@ -18,7 +18,7 @@ const Home = () => {
   return (
     <>
       <Header home />
-      <Hero text="Today's Total" />
+      <Hero text="Today's Total" image />
       <SearchBar />
       <CardList stocks={stocks} />
     </>

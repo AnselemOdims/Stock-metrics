@@ -3,18 +3,12 @@ import { BsArrowUp, BsArrowDown } from 'react-icons/bs';
 import { motion } from 'framer-motion';
 import PropTypes from 'prop-types';
 
-import stockImg from '../images/stock.svg';
-
 const Section = styled.section`
   > div {
     display: flex;
     flex-direction: column;
     align-items: flex-end;
     height: 30vh;
-    background-image: url(${(props) => (props.image ? 'hello.png' : stockImg)});
-    background-repeat: no-repeat;
-    background-position: top left;
-    background-size: 300px 250px;
     color: #133B5C;
     padding: 10px 20px;
 
@@ -36,7 +30,7 @@ const Section = styled.section`
   }
 `;
 
-const Hero = ({ text, image }) => (
+const DetailHero = ({ text }) => (
   <Section>
     <motion.div>
       <h2>{text}</h2>
@@ -55,12 +49,8 @@ const Hero = ({ text, image }) => (
   </Section>
 );
 
-Hero.defaultProps = {
-  image: true,
-};
-Hero.propTypes = {
+DetailHero.propTypes = {
   text: PropTypes.string.isRequired,
-  image: PropTypes.string,
 };
 
-export default Hero;
+export default DetailHero;
