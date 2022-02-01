@@ -9,7 +9,7 @@ const NavBar = styled.header`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 5px 10px;
+  padding: 8px 10px;  
 
   > div:nth-of-type(1) {
     h3 {
@@ -32,7 +32,7 @@ const containerVariants = {
   },
   visible: {
     y: 0,
-    transition: { duration: 0.5, stiffness: 500 },
+    transition: { duration: 1, stiffness: 500 },
   },
 };
 

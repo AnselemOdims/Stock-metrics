@@ -19,7 +19,6 @@ const Section = styled.section`
     > div {
       display: flex;
       flex-direction: column;
-      align-items: center;
 
       span {
           margin-bottom: 10px;

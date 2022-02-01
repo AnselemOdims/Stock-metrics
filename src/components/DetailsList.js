@@ -15,14 +15,19 @@ const List = styled.ul`
 
   > li  {
     display: grid;
-    grid-template-columns: 50% 15% 1fr;
+    grid-template-columns: 48% 0.5% 12% 0.5% 1fr;
     gap: 0 10px;
-    border: solid 1px #f5eedc;
+    border: solid 1px #A1B57D;
     border-left: solid 5px #A1B57D;
     padding: 15px 8px;
     font-size: 12px;
     background: #e8e8a6;
     color: #133b5c;
+
+    > span {
+        border-right: solid 1px #A1B57D;
+        opacity: 0.4;
+    }
 
     > div:nth-of-type(1) {
       > span{
@@ -85,6 +90,7 @@ const DetailsList = ({ details }) => (
             second={`Filling Date: ${detail.fillingDate}`}
             third={`Accepted Date: ${detail.acceptedDate}`}
           />
+          <span />
           <DetailsCard
             first={detail.symbol}
             second={detail.eps.toFixed(2)}
@@ -93,6 +99,7 @@ const DetailsList = ({ details }) => (
             <BsArrowUp color="green" />
             <BsArrowDown color="red" />
           </DetailsCard>
+          <span />
           <DetailsCard
             first={`Revenue: $${detail.revenue / (10 ** 9)}billion`}
             second={`Profit: $${detail.grossProfit / (10 ** 9)}billion`}
