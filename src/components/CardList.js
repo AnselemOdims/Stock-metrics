@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 import { motion } from 'framer-motion';
 import PropTypes from 'prop-types';
+import { searchFunc } from '../utils/helper';
 
 import Card from './Card';
 
@@ -26,7 +27,7 @@ const containerVariants = {
   },
 };
 
-const CardList = ({ stocks }) => (
+const CardList = ({ stocks, data }) => (
   <motion.div
     variants={containerVariants}
     initial="hidden"
@@ -34,7 +35,7 @@ const CardList = ({ stocks }) => (
     exit="exit"
   >
     <List>
-      {stocks.map((item) => (
+      {stocks.filter((stock) => searchFunc(stock, data)).map((item) => (
         <li key={item.ticker}>
           <Card
             id={item.ticker}
@@ -58,5 +59,6 @@ CardList.propTypes = {
     changesPercentage: PropTypes.string.isRequired,
     companyName: PropTypes.string.isRequired,
   })).isRequired,
+  data: PropTypes.string.isRequired,
 };
 export default CardList;

@@ -36,7 +36,7 @@ const Section = styled.section`
   }
 `;
 
-const Hero = ({ text, image }) => (
+const Hero = ({ text }) => (
   <Section>
     <motion.div>
       <h2>{text}</h2>
@@ -55,12 +55,8 @@ const Hero = ({ text, image }) => (
   </Section>
 );
 
-Hero.defaultProps = {
-  image: true,
-};
 Hero.propTypes = {
   text: PropTypes.string.isRequired,
-  image: PropTypes.string,
 };
 
 export default Hero;

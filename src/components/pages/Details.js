@@ -7,6 +7,7 @@ import Header from '../Header';
 import DetailHero from '../DetailHero';
 import { fetchDetails } from '../../redux/stocks/thunks/stock';
 import DetailsList from '../DetailsList';
+import { sumRevenue, sumProfit, sumExpenses } from '../../utils/helper';
 
 const Topic = styled.div`
   > p {
@@ -15,7 +16,7 @@ const Topic = styled.div`
     background: #A1B57D;
     color: #fff;
   }
-`
+`;
 
 const Details = () => {
   const dispatch = useDispatch();
@@ -23,16 +24,25 @@ const Details = () => {
   const details = useSelector(({ detailsReducer }) => detailsReducer.details);
   const param = useParams();
 
-  const detail = stocks.find((stock) => stock.ticker == param.id);
+  const detail = stocks.find((stock) => stock.ticker === param.id);
 
   useEffect(() => {
     dispatch(fetchDetails(param.id));
   }, [param]);
 
+  const revenue = sumRevenue(details);
+  const profit = sumProfit(details);
+  const expenses = sumExpenses(details);
+
   return (
     <>
       <Header home={false} />
-      <DetailHero text={detail.companyName} details={details} />
+      <DetailHero
+        text={detail.companyName}
+        revenue={revenue}
+        profit={profit}
+        expenses={expenses}
+      />
       <Topic><p>YEARLY BREAKDOWN</p></Topic>
       <DetailsList details={details} />
     </>

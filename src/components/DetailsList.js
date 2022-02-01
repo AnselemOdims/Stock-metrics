@@ -104,4 +104,18 @@ const DetailsList = ({ details }) => (
   </motion.div>
 );
 
+DetailsList.propTypes = {
+  details: PropTypes.arrayOf(PropTypes.shape({
+    calendarYear: PropTypes.string.isRequired,
+    eps: PropTypes.number.isRequired,
+    ebitdaratio: PropTypes.number.isRequired,
+    revenue: PropTypes.number.isRequired,
+    grossProfit: PropTypes.number.isRequired,
+    costAndExpenses: PropTypes.number.isRequired,
+    fillingDate: PropTypes.string.isRequired,
+    acceptedDate: PropTypes.string.isRequired,
+    symbol: PropTypes.string.isRequired,
+  })).isRequired,
+};
+
 export default DetailsList;

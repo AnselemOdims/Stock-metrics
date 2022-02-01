@@ -1,7 +1,6 @@
 import styled from 'styled-components';
 import { FaSearch } from 'react-icons/fa';
-import { useDispatch } from 'react-redux';
-import { stockSearch } from '../redux/stocks/actions/stockAction';
+import PropTypes from 'prop-types';
 
 const Search = styled.div`
   display: flex;
@@ -23,14 +22,16 @@ const Search = styled.div`
     background: #A1B57D;
   }
 `;
-const SearchBar = ({handleSearch, data}) => { 
-  const dispatch = useDispatch();
-  
-  return (
+const SearchBar = ({ handleSearch, data }) => (
   <Search>
-    <input type="search" onChange={handleSearch} value={data}/>
+    <input type="search" onChange={handleSearch} value={data} />
     <button type="button"><FaSearch color="#fff" /></button>
   </Search>
-)};
+);
+
+SearchBar.propTypes = {
+  handleSearch: PropTypes.func.isRequired,
+  data: PropTypes.string.isRequired,
+};
 
 export default SearchBar;

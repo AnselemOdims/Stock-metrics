@@ -1,9 +1,6 @@
 import styled from 'styled-components';
-import { BsArrowUp, BsArrowDown } from 'react-icons/bs';
 import { motion } from 'framer-motion';
 import PropTypes from 'prop-types';
-
-import { sumRevenue, sumProfit, sumExpenses } from '../utils/helper';
 
 const Section = styled.section`
   > div {
@@ -32,15 +29,29 @@ const Section = styled.section`
   }
 `;
 
-const DetailHero = ({ text, details }) => (
+const DetailHero = ({
+  text, revenue, profit, expenses,
+}) => (
   <Section>
     <motion.div>
       <h2>{text.toUpperCase()}</h2>
       <p>INCOME STATEMENT</p>
       <div>
-        <span>{`Total Revenue: $${sumRevenue(details)}billion`}</span>
-        <span>{`Total Profit: $${sumProfit(details)}billion`}</span>
-        <span>{`Total Expenses: $${sumExpenses(details)}billion`}</span>
+        <span>
+          Total Revenue:
+          {revenue}
+          billion
+        </span>
+        <span>
+          Total Profit:
+          {profit}
+          billion
+        </span>
+        <span>
+          Total Expenses:
+          {expenses}
+          billion
+        </span>
       </div>
     </motion.div>
   </Section>
@@ -48,6 +59,9 @@ const DetailHero = ({ text, details }) => (
 
 DetailHero.propTypes = {
   text: PropTypes.string.isRequired,
+  revenue: PropTypes.number.isRequired,
+  profit: PropTypes.number.isRequired,
+  expenses: PropTypes.number.isRequired,
 };
 
 export default DetailHero;

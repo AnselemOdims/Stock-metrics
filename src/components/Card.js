@@ -1,7 +1,6 @@
 import styled from 'styled-components';
 import { BsArrowUp, BsArrowDown, BsArrowRightCircle } from 'react-icons/bs';
 import { NavLink } from 'react-router-dom';
-import { motion } from 'framer-motion';
 import PropTypes from 'prop-types';
 import Img from '../images/stock_card.png';
 
@@ -55,7 +54,7 @@ const Container = styled.div`
 const Card = ({
   id, ticker, changes, price, changesPercentage, companyName,
 }) => (
-  <Container onClick={() => console.log('hello')}>
+  <Container>
     <NavLink to={`/details/${id}`}>
       <div>
         <h2>{companyName}</h2>
