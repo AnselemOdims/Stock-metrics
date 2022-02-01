@@ -12,6 +12,7 @@ export const sumExpenses = (details) => (
 
 export const sumPrices = (stocks) => (
   stocks.reduce((cur, { price }) => cur + Number(price), 0)
+    .toFixed(2)
 );
 
 export const sumPercent = (stocks) => (
