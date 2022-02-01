@@ -20,7 +20,7 @@ const Section = styled.section`
 
     > h2 {
       font-size: 2rem;
-      margin: -7px 0 20px;
+      margin: -20px 0 1px;
     }
 
     > div {

@@ -59,7 +59,7 @@ const Card = ({
     <NavLink to={`/details/${id}`}>
       <div>
         <h2>{companyName}</h2>
-        <BsArrowRightCircle />
+        <BsArrowRightCircle size="16px" />
       </div>
       <span>{ticker}</span>
       <div>

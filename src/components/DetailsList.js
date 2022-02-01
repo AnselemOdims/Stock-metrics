@@ -18,7 +18,8 @@ const List = styled.ul`
     grid-template-columns: 50% 15% 1fr;
     gap: 0 10px;
     border: solid 1px #f5eedc;
-    padding: 15px 5px;
+    border-left: solid 5px #A1B57D;
+    padding: 15px 8px;
     font-size: 12px;
     background: #e8e8a6;
     color: #133b5c;
@@ -78,7 +79,7 @@ const DetailsList = ({ details }) => (
   >
     <List>
       {details.map((detail) => (
-        <li key={detail.symbol}>
+        <li key={detail.calendarYear}>
           <DetailsCard
             first={detail.calendarYear}
             second={`Filling Date: ${detail.fillingDate}`}

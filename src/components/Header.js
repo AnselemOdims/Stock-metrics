@@ -45,7 +45,7 @@ const Header = ({ home }) => (
         </NavLink>
       )}
       <div>
-        <h3>Stock Metrics</h3>
+        <h3>{home ? 'Stock Metrics' : 'Company Details'}</h3>
       </div>
       <div>
         <span><BsFillMicFill size="18px" color="#133B5C" /></span>

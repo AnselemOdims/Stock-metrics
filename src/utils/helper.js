@@ -3,3 +3,7 @@ export const sumRevenue = (details) => details.reduce((cur, { revenue }) => cur 
 export const sumProfit = (details) => details.reduce((cur, { grossProfit }) => cur + grossProfit, 0) / (10 ** 9);
 
 export const sumExpenses = (details) => details.reduce((cur, { costAndExpenses }) => cur + costAndExpenses, 0) / (10 ** 9);
+
+export const searchFunc = (array, item) => {
+  return array.filter(({companyName})=>companyName.toLowerCase().includes(item.toLowerCase().trim()))
+}

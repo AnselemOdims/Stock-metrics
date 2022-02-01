@@ -1,6 +1,6 @@
 import * as Actions from '../actions/stockAction';
 
-const APIKEY = '01379d92653f0acb39ad012ef167fe3e';
+const APIKEY = '1ba707feba7b95aee5b8aeed8ef036a2';
 
 export const fetchStocks = () => async (dispatch) => {
   const res = await fetch(`https://financialmodelingprep.com/api/v3/actives?limit=30&apikey=${APIKEY}`);
