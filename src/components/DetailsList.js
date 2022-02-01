@@ -2,8 +2,10 @@ import styled from 'styled-components';
 import { motion } from 'framer-motion';
 import PropTypes from 'prop-types';
 import { BsArrowUp, BsArrowDown } from 'react-icons/bs';
+import { useSelector } from 'react-redux';
 
 import DetailsCard from './DetailsCard';
+import Spinner from './Spinner';
 
 const List = styled.ul`
   list-style: none;
@@ -61,6 +63,12 @@ const List = styled.ul`
   }
 `;
 
+const NoRecord = styled.h3`
+  text-align: center;
+  color: #133b5c;
+  margin-top: 50px;
+`;
+
 const containerVariants = {
   hidden: {
     x: '100vw',
@@ -75,41 +83,50 @@ const containerVariants = {
   },
 };
 
-const DetailsList = ({ details }) => (
-  <motion.div
-    variants={containerVariants}
-    initial="hidden"
-    animate="visible"
-    exit="exit"
-  >
-    <List>
-      {details.map((detail) => (
-        <li key={detail.calendarYear}>
-          <DetailsCard
-            first={detail.calendarYear}
-            second={`Filling Date: ${detail.fillingDate}`}
-            third={`Accepted Date: ${detail.acceptedDate}`}
-          />
-          <span />
-          <DetailsCard
-            first={detail.symbol}
-            second={detail.eps.toFixed(2)}
-            third={detail.ebitdaratio.toFixed(2)}
-          >
-            <BsArrowUp color="green" />
-            <BsArrowDown color="red" />
-          </DetailsCard>
-          <span />
-          <DetailsCard
-            first={`Revenue: $${detail.revenue / (10 ** 9)}billion`}
-            second={`Profit: $${detail.grossProfit / (10 ** 9)}billion`}
-            third={`Expenses: $${detail.costAndExpenses / (10 ** 9)}billion`}
-          />
-        </li>
-      ))}
-    </List>
-  </motion.div>
-);
+const DetailsList = ({ details }) => {
+  const loading = useSelector(({ loadingReducer }) => loadingReducer.loading);
+
+  if (loading) return <Spinner />;
+  return (
+    <motion.div
+      variants={containerVariants}
+      initial="hidden"
+      animate="visible"
+      exit="exit"
+    >
+      {details.length > 0
+        ? (
+          <List>
+            {details.map((detail) => (
+              <li key={detail.calendarYear}>
+                <DetailsCard
+                  first={detail.calendarYear}
+                  second={`Filling Date: ${detail.fillingDate}`}
+                  third={`Accepted Date: ${detail.acceptedDate}`}
+                />
+                <span />
+                <DetailsCard
+                  first={detail.symbol}
+                  second={detail.eps.toFixed(2)}
+                  third={detail.ebitdaratio.toFixed(2)}
+                >
+                  <BsArrowUp color="green" />
+                  <BsArrowDown color="red" />
+                </DetailsCard>
+                <span />
+                <DetailsCard
+                  first={`Revenue: $${detail.revenue / (10 ** 9)}billion`}
+                  second={`Profit: $${detail.grossProfit / (10 ** 9)}billion`}
+                  third={`Expenses: $${detail.costAndExpenses / (10 ** 9)}billion`}
+                />
+              </li>
+            ))}
+          </List>
+        )
+        : <NoRecord>No records found</NoRecord>}
+    </motion.div>
+  );
+};
 
 DetailsList.propTypes = {
   details: PropTypes.arrayOf(PropTypes.shape({

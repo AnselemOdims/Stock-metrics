@@ -25,7 +25,10 @@ const Search = styled.div`
 const SearchBar = ({ handleSearch, data }) => (
   <Search>
     <input type="search" onChange={handleSearch} value={data} />
-    <button type="button"><FaSearch color="#fff" /></button>
+    <button type="button">
+      <FaSearch color="#fff" />
+      .
+    </button>
   </Search>
 );
 

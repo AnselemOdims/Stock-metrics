@@ -5,7 +5,7 @@ import PropTypes from 'prop-types';
 
 import { searchFunc } from '../utils/helper';
 import Card from './Card';
-import Spinner from './Loader';
+import Spinner from './Spinner';
 
 const List = styled.ul`
   list-style: none;
@@ -14,6 +14,10 @@ const List = styled.ul`
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   max-width: 100vw;
+  min-height: 50vh;
+  @media (min-width: 768px) {
+    grid-template-columns: repeat(3, 1fr)
+  }
 `;
 const containerVariants = {
   hidden: {
