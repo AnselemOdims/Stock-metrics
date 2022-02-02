@@ -77,3 +77,27 @@ exports[`Card should render component 1`] = `
   </div>
 </DocumentFragment>
 `;
+
+exports[`Details Card should render component correctly 1`] = `
+<DocumentFragment>
+  <div
+    class="sc-gsDKAQ gFZcdC"
+  >
+    <span
+      data-testid="first"
+    >
+      2020-02-02
+    </span>
+    <span
+      data-testid="second"
+    >
+      Filling Date: 2020-02-05
+    </span>
+    <span
+      data-testid="third"
+    >
+      Accepted Date: 2020-02-05
+    </span>
+  </div>
+</DocumentFragment>
+`;

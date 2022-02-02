@@ -10,12 +10,12 @@ const DetailsCard = ({
   children, first, second, third,
 }) => (
   <Container>
-    <span>{first}</span>
-    <span>
+    <span data-testid="first">{first}</span>
+    <span data-testid="second">
       {children?.[0]}
       {second}
     </span>
-    <span>
+    <span data-testid="third">
       {children?.[1]}
       {third}
     </span>
