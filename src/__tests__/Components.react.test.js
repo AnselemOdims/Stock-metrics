@@ -1,4 +1,4 @@
-import { render, screen , within } from '@testing-library/react';
+import { render, within } from '@testing-library/react';
 import '@testing-library/jest-dom';
 import { MemoryRouter } from 'react-router-dom';
 

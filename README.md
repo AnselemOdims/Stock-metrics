@@ -1,7 +1,57 @@
-# Getting Started with Create React App
+![](https://img.shields.io/badge/stock_metrics-green)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Bookstore
 
+> Stock metrics is a web(mobile-focused) app for checking the companies listed on the stoc exchange and see their live metrics. Its data is consumed from the Financial modelling API. It is built using React, Redux, and Styled Components, Framer Motion. 
+> 
+
+<br/>
+
+# Mini Demo 
+
+![](./src/images/demo.gif)
+
+# Live Demo
+
+[Live Link]()
+
+<br/>
+
+Additional description about the project and its features.
+## Built With
+
+- Major languages (JavaScript)
+- Framework/Libraries (React, Styled-Components, Framer Motion, React Testing Library)
+- Technologies/tools used 
+  
+  ``` bash
+  - create-react-app tool
+  - Webpack(Code Bundlng et al)
+  - Babel (code transpiling)
+  - Jest(for testing)
+  - Git(version control)
+  - ESLint(JavaScript linting)
+  - Stylelint(style linting)
+
+  ```
+
+
+## Getting Started
+
+To get a local copy up and running follow these simple example steps.
+
+### Prerequisites
+ - A text editor(preferably Visual Studio Code)
+### Install
+  -  [Git](https://git-scm.com/downloads)
+  -  [Node](https://nodejs.org/en/download/)
+### Usage
+#### Clone this repository
+
+```bash
+$ git clone git@github.com:AnselemOdims/Stock-metrics.git
+$ cd Stock-metrics
+```
 ## Available Scripts
 
 In the project directory, you can run:
@@ -27,44 +77,27 @@ It correctly bundles React in production mode and optimizes the build for the be
 The build is minified and the filenames include the hashes.\
 Your app is ready to be deployed!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Authors
 
-### `npm run eject`
+👤 **Anselem Odimegwu**
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+- GitHub: [github](https://github.com/AnselemOdims)
+- LinkedIn: [LinkedIn](https://www.linkedin.com/in/anselem-odimegwu/)
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+<br>
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## 🤝 Contributing
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+Contributions, issues, and feature requests are welcome!
 
-## Learn More
+Feel free to check the [issues page](https://github.com/AnselemOdims/Stock-metrics/issues).
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+<br>
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## Show your support
 
-### Code Splitting
+Give a ⭐️ if you like this project!
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+## 📝 License
 
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+This project is [MIT](https://opensource.org/licenses/MIT) licensed.
