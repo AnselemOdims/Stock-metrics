@@ -6,6 +6,7 @@ import Card from '../components/Card';
 import DetailsCard from '../components/DetailsCard';
 import Header from '../components/Header';
 import Hero from '../components/Hero';
+import SearchBar from '../components/SearchBar';
 
 describe('Card', () => {
   test('should render component', () => {
@@ -128,5 +129,28 @@ describe('Hero', () => {
     expect(await within(container).findByText('Today\'s Total')).toBeTruthy();
     expect(hero.children.length).toBe(3);
     expect(spans.length).toBe(3);
+  });
+});
+
+describe('SearchBar', () => {
+  test('should render correctly', () => {
+    const { asFragment } = render(
+      <SearchBar
+        handleSearch={() => {}}
+        data=""
+      />,
+    );
+    expect(asFragment()).toMatchSnapshot();
+  });
+
+  test('should render children correctly', async () => {
+    const { container } = render(
+      <SearchBar
+        handleSearch={() => {}}
+        data=""
+      />,
+    );
+    expect(container.children.length).toBe(1);
+    expect(await within(container).findByRole('button')).toBeTruthy();
   });
 });
