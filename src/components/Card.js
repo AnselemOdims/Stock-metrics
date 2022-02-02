@@ -56,12 +56,12 @@ const Card = ({
     <Container
       onClick={() => navigate(`/details/${id}`)}
     >
-      <div>
+      <div data-testid="company">
         <h2>{companyName}</h2>
         <BsArrowRightCircle size="16px" />
       </div>
       <span>{ticker}</span>
-      <div>
+      <div data-testid="card-details">
         <span>
           $
           {price}
