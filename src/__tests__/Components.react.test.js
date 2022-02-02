@@ -89,3 +89,20 @@ describe('Details Card', () => {
   });
 });
 
+describe('Header', () => {
+  test('should render component correctly', () => {
+    const { asFragment } = render(<Header home />, { wrapper: MemoryRouter });
+    expect(asFragment()).toMatchSnapshot();
+  });
+
+  test('should render children correctly', async () => {
+    const { container } = render(<Header home />, { wrapper: MemoryRouter });
+
+    const nav = container.querySelector('[data-testid="nav"]');
+    const icons = container.querySelector('[data-testid="icons"]');
+
+    expect(nav.children.length).toBe(2);
+    expect(icons.children.length).toBe(2);
+    expect(await within(nav).findByText('Stock Metrics')).toBeTruthy();
+  });
+});

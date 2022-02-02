@@ -38,7 +38,7 @@ const containerVariants = {
 
 const Header = ({ home }) => (
   <motion.div variants={containerVariants} initial="hidden" animate="visible">
-    <NavBar>
+    <NavBar data-testid="nav">
       {!home && (
         <NavLink to="/">
           <IoIosArrowBack size="20px" color="#133B5C" />
