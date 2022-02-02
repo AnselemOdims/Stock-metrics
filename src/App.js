@@ -1,7 +1,10 @@
-import { Routes, Route, useLocation } from 'react-router-dom';
+import { Routes, Route } from 'react-router-dom';
 import { AnimatePresence } from 'framer-motion';
 import styled from 'styled-components';
+import { useDispatch } from 'react-redux';
+import { useEffect } from 'react';
 
+import { fetchStocks } from './redux/stocks/thunks/stock';
 import Details from './components/pages/Details';
 import Home from './components/pages/Home';
 
@@ -11,11 +14,15 @@ const AppContainer = styled.div`
   }
 `;
 const App = () => {
-  const location = useLocation();
+  const dispatch = useDispatch();
+  useEffect(() => {
+    dispatch(fetchStocks());
+  }, []);
+
   return (
     <AppContainer>
       <AnimatePresence>
-        <Routes location={location} key={location.key}>
+        <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/details/:id" element={<Details />} />
         </Routes>

@@ -1,20 +1,14 @@
-import { useSelector, useDispatch } from 'react-redux';
-import { useState, useEffect } from 'react';
+import { useSelector } from 'react-redux';
+import { useState } from 'react';
 
 import Header from '../Header';
 import Hero from '../Hero';
 import SearchBar from '../SearchBar';
 import CardList from '../CardList';
-import { fetchStocks } from '../../redux/stocks/thunks/stock';
 
 const Home = () => {
-  const dispatch = useDispatch();
   const stocks = useSelector(({ stocksReducer }) => stocksReducer.stocks);
   const [value, setValue] = useState('');
-
-  useEffect(() => {
-    if (stocks.length === 0) dispatch(fetchStocks());
-  }, []);
 
   const handleSearch = (e) => {
     setValue(e.target.value);

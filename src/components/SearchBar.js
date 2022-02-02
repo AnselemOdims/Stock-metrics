@@ -8,7 +8,7 @@ const Search = styled.div`
   > input {
     width: 100%;
     padding: 8px;
-    border: solid 2px #A1B57D;
+    border: solid 2px #e8e8a6;
 
     &:focus {
       outline: none;
@@ -19,7 +19,8 @@ const Search = styled.div`
     justify-self: center;
     width: 10%;
     border: none;
-    background: #A1B57D;
+    background: #e8e8a6;
+    color: #fff;
   }
 `;
 const SearchBar = ({ handleSearch, data }) => (
