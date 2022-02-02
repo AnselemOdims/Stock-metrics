@@ -1,7 +1,7 @@
 export const ALLSTOCKS_RETRIEVED = 'stockMetrics/stocks/ALLSTOCKS_RETRIEVED';
 export const SINGLESTOCK_RETRIEVED = 'stockMetrics/stocks/SINGLESTOCK_RETRIEVED';
-export const LOADING_STARTED = 'bookStore/books/LOADING_STARTED';
-export const LOADING_FINISHED = 'bookStore/books/LOADING_FINISHED';
+export const LOADING_STARTED = 'stockMetrics/stocks/LOADING_STARTED';
+export const LOADING_FINISHED = 'stockMetrics/stocks/LOADING_FINISHED';
 
 export const getAllStocks = (payload) => ({
   type: ALLSTOCKS_RETRIEVED,
