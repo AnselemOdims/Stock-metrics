@@ -47,7 +47,7 @@ const Header = ({ home }) => (
       <div>
         <h3>{home ? 'Stock Metrics' : 'Company Details'}</h3>
       </div>
-      <div>
+      <div data-testid="icons">
         <span><BsFillMicFill size="18px" color="#133B5C" /></span>
         <span>
           {' '}
