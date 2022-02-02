@@ -41,7 +41,7 @@ const Hero = ({ text, stocks }) => (
   <Section>
     <motion.div>
       <h2>{text}</h2>
-      <div>
+      <div data-testid="hero-details">
         <span>{`$${sumPrices(stocks)}`}</span>
         <span>
           <BsArrowUp color="green" />

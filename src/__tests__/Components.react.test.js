@@ -1,11 +1,11 @@
 import { render, screen , within } from '@testing-library/react';
 import '@testing-library/jest-dom';
-import { Provider } from 'react-redux';
 import { MemoryRouter } from 'react-router-dom';
 
 import Card from '../components/Card';
 import DetailsCard from '../components/DetailsCard';
 import Header from '../components/Header';
+import Hero from '../components/Hero';
 
 describe('Card', () => {
   test('should render component', () => {
@@ -104,5 +104,29 @@ describe('Header', () => {
     expect(nav.children.length).toBe(2);
     expect(icons.children.length).toBe(2);
     expect(await within(nav).findByText('Stock Metrics')).toBeTruthy();
+  });
+});
+
+describe('Hero', () => {
+  test('should render correctly', () => {
+    const { asFragment } = render(
+      <Hero
+        text=""
+        stocks={[]}
+      />,
+    );
+    expect(asFragment()).toMatchSnapshot();
+  });
+
+  test('should render children correctly', async () => {
+    const { container } = render(<Hero text="Today's Total" stocks={[]} />);
+
+    const hero = container.querySelector('[data-testid="hero-details"]');
+    const spans = hero.querySelectorAll('span');
+
+    expect(container.children.length).toBe(1);
+    expect(await within(container).findByText('Today\'s Total')).toBeTruthy();
+    expect(hero.children.length).toBe(3);
+    expect(spans.length).toBe(3);
   });
 });
