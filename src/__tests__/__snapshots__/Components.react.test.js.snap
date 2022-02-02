@@ -1,0 +1,254 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Card should render component 1`] = `
+<DocumentFragment>
+  <div
+    class="sc-bdvvtL iDLfPY"
+  >
+    <div
+      data-testid="company"
+    >
+      <h2>
+        Apple Inc.
+      </h2>
+      <svg
+        fill="currentColor"
+        height="16px"
+        stroke="currentColor"
+        stroke-width="0"
+        viewBox="0 0 16 16"
+        width="16px"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8zm15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM4.5 7.5a.5.5 0 0 0 0 1h5.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5H4.5z"
+          fill-rule="evenodd"
+        />
+      </svg>
+    </div>
+    <span>
+      AAPL
+    </span>
+    <div
+      data-testid="card-details"
+    >
+      <span>
+        $250
+      </span>
+      <span>
+        <svg
+          color="green"
+          fill="currentColor"
+          height="1em"
+          stroke="currentColor"
+          stroke-width="0"
+          style="color: green;"
+          viewBox="0 0 16 16"
+          width="1em"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M8 15a.5.5 0 0 0 .5-.5V2.707l3.146 3.147a.5.5 0 0 0 .708-.708l-4-4a.5.5 0 0 0-.708 0l-4 4a.5.5 0 1 0 .708.708L7.5 2.707V14.5a.5.5 0 0 0 .5.5z"
+            fill-rule="evenodd"
+          />
+        </svg>
+        1.2
+      </span>
+      <span>
+        <svg
+          color="red"
+          fill="currentColor"
+          height="1em"
+          stroke="currentColor"
+          stroke-width="0"
+          style="color: red;"
+          viewBox="0 0 16 16"
+          width="1em"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M8 1a.5.5 0 0 1 .5.5v11.793l3.146-3.147a.5.5 0 0 1 .708.708l-4 4a.5.5 0 0 1-.708 0l-4-4a.5.5 0 0 1 .708-.708L7.5 13.293V1.5A.5.5 0 0 1 8 1z"
+            fill-rule="evenodd"
+          />
+        </svg>
+        0.23
+      </span>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`Details Card should render component correctly 1`] = `
+<DocumentFragment>
+  <div
+    class="sc-gsDKAQ gFZcdC"
+  >
+    <span
+      data-testid="first"
+    >
+      2020-02-02
+    </span>
+    <span
+      data-testid="second"
+    >
+      Filling Date: 2020-02-05
+    </span>
+    <span
+      data-testid="third"
+    >
+      Accepted Date: 2020-02-05
+    </span>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`Header should render component correctly 1`] = `
+<DocumentFragment>
+  <div
+    style="transform: translateY(-100px) translateZ(0);"
+  >
+    <header
+      class="sc-dkPtRN byqvGC"
+      data-testid="nav"
+    >
+      <div>
+        <h3>
+          Stock Metrics
+        </h3>
+      </div>
+      <div
+        data-testid="icons"
+      >
+        <span>
+          <svg
+            color="#133B5C"
+            fill="currentColor"
+            height="18px"
+            stroke="currentColor"
+            stroke-width="0"
+            style="color: rgb(19, 59, 92);"
+            viewBox="0 0 16 16"
+            width="18px"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M5 3a3 3 0 0 1 6 0v5a3 3 0 0 1-6 0V3z"
+            />
+            <path
+              d="M3.5 6.5A.5.5 0 0 1 4 7v1a4 4 0 0 0 8 0V7a.5.5 0 0 1 1 0v1a5 5 0 0 1-4.5 4.975V15h3a.5.5 0 0 1 0 1h-7a.5.5 0 0 1 0-1h3v-2.025A5 5 0 0 1 3 8V7a.5.5 0 0 1 .5-.5z"
+            />
+          </svg>
+        </span>
+        <span>
+           
+          <svg
+            color="#133B5C"
+            fill="currentColor"
+            height="18px"
+            stroke="currentColor"
+            stroke-width="0"
+            style="color: rgb(19, 59, 92);"
+            viewBox="0 0 512 512"
+            width="18px"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M416.3 256c0-21 13.1-38.9 31.7-46.1-4.9-20.5-13-39.7-23.7-57.1-6.4 2.8-13.2 4.3-20.1 4.3-12.6 0-25.2-4.8-34.9-14.4-14.9-14.9-18.2-36.8-10.2-55-17.3-10.7-36.6-18.8-57-23.7C295 82.5 277 95.7 256 95.7S217 82.5 209.9 64c-20.5 4.9-39.7 13-57.1 23.7 8.1 18.1 4.7 40.1-10.2 55-9.6 9.6-22.3 14.4-34.9 14.4-6.9 0-13.7-1.4-20.1-4.3C77 170.3 68.9 189.5 64 210c18.5 7.1 31.7 25 31.7 46.1 0 21-13.1 38.9-31.6 46.1 4.9 20.5 13 39.7 23.7 57.1 6.4-2.8 13.2-4.2 20-4.2 12.6 0 25.2 4.8 34.9 14.4 14.8 14.8 18.2 36.8 10.2 54.9 17.4 10.7 36.7 18.8 57.1 23.7 7.1-18.5 25-31.6 46-31.6s38.9 13.1 46 31.6c20.5-4.9 39.7-13 57.1-23.7-8-18.1-4.6-40 10.2-54.9 9.6-9.6 22.2-14.4 34.9-14.4 6.8 0 13.7 1.4 20 4.2 10.7-17.4 18.8-36.7 23.7-57.1-18.4-7.2-31.6-25.1-31.6-46.2zm-159.4 79.9c-44.3 0-80-35.9-80-80s35.7-80 80-80 80 35.9 80 80-35.7 80-80 80z"
+            />
+          </svg>
+        </span>
+      </div>
+    </header>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`Hero should render correctly 1`] = `
+<DocumentFragment>
+  <section
+    class="sc-hKwDye fKlLEq"
+  >
+    <div>
+      <h2 />
+      <div
+        data-testid="hero-details"
+      >
+        <span>
+          $0.00
+        </span>
+        <span>
+          <svg
+            color="green"
+            fill="currentColor"
+            height="1em"
+            stroke="currentColor"
+            stroke-width="0"
+            style="color: green;"
+            viewBox="0 0 16 16"
+            width="1em"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M8 15a.5.5 0 0 0 .5-.5V2.707l3.146 3.147a.5.5 0 0 0 .708-.708l-4-4a.5.5 0 0 0-.708 0l-4 4a.5.5 0 1 0 .708.708L7.5 2.707V14.5a.5.5 0 0 0 .5.5z"
+              fill-rule="evenodd"
+            />
+          </svg>
+          +0.00
+        </span>
+        <span>
+          <svg
+            color="red"
+            fill="currentColor"
+            height="1em"
+            stroke="currentColor"
+            stroke-width="0"
+            style="color: red;"
+            viewBox="0 0 16 16"
+            width="1em"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M8 1a.5.5 0 0 1 .5.5v11.793l3.146-3.147a.5.5 0 0 1 .708.708l-4 4a.5.5 0 0 1-.708 0l-4-4a.5.5 0 0 1 .708-.708L7.5 13.293V1.5A.5.5 0 0 1 8 1z"
+              fill-rule="evenodd"
+            />
+          </svg>
+          -0.00
+        </span>
+      </div>
+    </div>
+  </section>
+</DocumentFragment>
+`;
+
+exports[`SearchBar should render correctly 1`] = `
+<DocumentFragment>
+  <div
+    class="sc-eCImPb lmdkNw"
+  >
+    <input
+      type="search"
+      value=""
+    />
+    <button
+      type="button"
+    >
+      <svg
+        color="#fff"
+        fill="currentColor"
+        height="1em"
+        stroke="currentColor"
+        stroke-width="0"
+        style="color: rgb(255, 255, 255);"
+        viewBox="0 0 512 512"
+        width="1em"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"
+        />
+      </svg>
+      .
+    </button>
+  </div>
+</DocumentFragment>
+`;
