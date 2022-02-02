@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 import { BsArrowUp, BsArrowDown, BsArrowRightCircle } from 'react-icons/bs';
-import { NavLink } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import Img from '../images/stock_card.png';
 
@@ -14,10 +14,7 @@ const Container = styled.div`
   background-position: bottom right;
   background-size: 55% 23%;
   height: 250px;
-
-  > a {
-    text-decoration: none;
-    color: #133b5c;
+  color: #133b5c;
 
     > div:nth-of-type(1) {
       display: flex;
@@ -49,13 +46,16 @@ const Container = styled.div`
         font-weight: bold;
       }
     }
-  }
 `;
 const Card = ({
   id, ticker, changes, price, changesPercentage, companyName,
-}) => (
-  <Container>
-    <NavLink to={`/details/${id}`}>
+}) => {
+  const navigate = useNavigate();
+
+  return (
+    <Container
+      onClick={() => navigate(`/details/${id}`)}
+    >
       <div>
         <h2>{companyName}</h2>
         <BsArrowRightCircle size="16px" />
@@ -75,9 +75,9 @@ const Card = ({
           {changesPercentage}
         </span>
       </div>
-    </NavLink>
-  </Container>
-);
+    </Container>
+  );
+};
 
 Card.propTypes = {
   id: PropTypes.string.isRequired,
