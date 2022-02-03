@@ -10,7 +10,7 @@ import Home from './components/pages/Home';
 
 const AppContainer = styled.div`
   @media (min-width: 768px) {
-    padding: 0 200px;
+    padding: 0 250px;
   }
 `;
 const App = () => {

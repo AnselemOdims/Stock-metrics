@@ -9,9 +9,11 @@ const Search = styled.div`
     width: 100%;
     padding: 8px;
     border: solid 2px #e8e8a6;
+    font-family: 'Poppins', sans-serif;
 
     &:focus {
       outline: none;
+      border: solid 2px #A1B57D;
     }
   }
 
@@ -25,7 +27,7 @@ const Search = styled.div`
 `;
 const SearchBar = ({ handleSearch, data }) => (
   <Search>
-    <input type="search" onChange={handleSearch} value={data} />
+    <input type="search" onChange={handleSearch} value={data} placeholder="Search..." />
     <button type="button">
       <FaSearch color="#fff" />
       .

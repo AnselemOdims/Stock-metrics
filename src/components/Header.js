@@ -41,7 +41,7 @@ const Header = ({ home }) => (
     <NavBar data-testid="nav">
       {!home && (
         <NavLink to="/">
-          <IoIosArrowBack size="20px" color="#133B5C" />
+          <IoIosArrowBack size="25px" color="#133B5C" />
         </NavLink>
       )}
       <div>
