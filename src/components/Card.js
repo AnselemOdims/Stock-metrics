@@ -15,6 +15,7 @@ const Container = styled.div`
   background-size: 55% 23%;
   height: 250px;
   color: #133b5c;
+  cursor: pointer;
 
     > div:nth-of-type(1) {
       display: flex;

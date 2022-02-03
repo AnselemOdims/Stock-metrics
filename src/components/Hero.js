@@ -34,6 +34,9 @@ const Section = styled.section`
           font-weight: bold;
         }
     }
+    @media (min-width: 768px) {
+      background-size: 700px 300px
+    }
   }
 `;
 
